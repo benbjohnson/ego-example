@@ -1,0 +1,13 @@
+<%! func RenderIndex(w io.Writer, widgets []*Widget) error %>
+
+<html>
+<body>
+  <h1>Widgets for Sale!</h1>
+
+  <ul>
+    <% for _, widget := range widgets { %>
+      <li><%= widget.Name %> for $<%= widget.Price %></li>
+    <% } %>
+  </ul>
+</body>
+</html>
